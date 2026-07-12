@@ -29,6 +29,26 @@ export const categories: SpotCategory[] = [
 
 export const spots: Spot[] = [
   {
+    id: "gomi-tunnel",
+    name: "Gomi Tunnel / 五味隧道",
+    category: "Culture",
+    summary:
+      "Part of the Yanase Forest Railway heritage, the Gomi Tunnel area preserves traces of the former railway once used to transport timber through the mountains. Entry into the tunnel is prohibited, but visitors can view the remains and surrounding scenery from outside.",
+    googleMapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Gomi+Tunnel+Umaji",
+    imageUrl: "/images/spots/gomi-tunnel-railway-bridge-01.jpg",
+    imageAlt: "Railway bridge remains near Gomi Tunnel in Umaji Village",
+    images: [
+      "/images/spots/gomi-tunnel-railway-bridge-01.jpg",
+      "/images/spots/gomi-tunnel-sign-01.jpg",
+      "/images/spots/gomi-tunnel-no-entry-01.jpg",
+    ],
+    hours: "Viewable from outside. Follow local signs.",
+    fee: "Free exterior viewing.",
+    notes:
+      "Tunnel entry is prohibited. Please view the site from outside and follow local signs.",
+  },
+  {
     id: "umapan-bakery",
     name: "Umapan Bakery",
     category: "Food",
