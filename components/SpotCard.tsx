@@ -1,4 +1,6 @@
 import type { Spot } from "@/data/spots";
+import Image from "next/image";
+import Link from "next/link";
 
 type SpotCardProps = {
   spot: Spot;
@@ -9,8 +11,12 @@ export function SpotCard({ spot }: SpotCardProps) {
     <article className="spot-card">
       <div className="spot-image-wrap">
         {spot.imageUrl ? (
-          // Use a regular img so draft external URLs can be swapped without config.
-          <img src={spot.imageUrl} alt={spot.imageAlt || spot.name} />
+          <Image
+            src={spot.imageUrl}
+            alt={spot.imageAlt || spot.name}
+            fill
+            sizes="(min-width: 1040px) 352px, (min-width: 720px) 50vw, 100vw"
+          />
         ) : (
           <div className="image-placeholder" aria-label="Photo not set">
             <span>{spot.category}</span>
@@ -41,14 +47,19 @@ export function SpotCard({ spot }: SpotCardProps) {
           </div>
         </dl>
 
-        <a
-          className="map-button"
-          href={spot.googleMapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open in Google Maps
-        </a>
+        <div className="spot-actions">
+          <Link className="detail-link" href={`/spots/${spot.id}`}>
+            View details &amp; photos
+          </Link>
+          <a
+            className="map-button"
+            href={spot.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open in Google Maps
+          </a>
+        </div>
       </div>
     </article>
   );
