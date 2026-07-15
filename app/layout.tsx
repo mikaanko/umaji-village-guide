@@ -22,6 +22,7 @@ export default function RootLayout({
           <nav aria-label="Main navigation">
             <Link href="/">Home</Link>
             <Link href="/spots">Spots</Link>
+            <Link href="/map">Map</Link>
           </nav>
         </header>
         {children}

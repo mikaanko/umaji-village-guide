@@ -55,9 +55,15 @@ export default async function SpotDetailPage({ params }: SpotDetailPageProps) {
           <div><dt>Fee</dt><dd>{spot.fee}</dd></div>
           <div><dt>Notes</dt><dd>{spot.notes}</dd></div>
         </dl>
-        <a className="map-button" href={spot.googleMapsUrl} target="_blank" rel="noopener noreferrer">
-          Open in Google Maps
-        </a>
+        <div className="spot-detail-map-links">
+          <Link className="detail-link" href={`/map#map-${spot.id}`}>
+            View on illustrated map<br />
+            <span lang="ja">イラストマップで見る</span>
+          </Link>
+          <a className="map-button" href={spot.googleMapsUrl} target="_blank" rel="noopener noreferrer">
+            Open in Google Maps
+          </a>
+        </div>
       </section>
     </main>
   );
