@@ -51,14 +51,16 @@ export function SpotCard({ spot }: SpotCardProps) {
           <Link className="detail-link" href={`/spots/${spot.id}`}>
             View details &amp; photos
           </Link>
-          <a
-            className="map-button"
-            href={spot.googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open in Google Maps
-          </a>
+          {spot.googleMapsUrl && (
+            <a
+              className="map-button"
+              href={spot.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Google Maps
+            </a>
+          )}
         </div>
       </div>
     </article>

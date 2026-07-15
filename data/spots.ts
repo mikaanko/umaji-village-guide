@@ -11,7 +11,7 @@ export type Spot = {
   nameEn?: string;
   category: SpotCategory;
   summary: string;
-  googleMapsUrl: string;
+  googleMapsUrl?: string;
   imageUrl?: string;
   imageAlt?: string;
   images?: string[];
@@ -223,6 +223,27 @@ export const spots: Spot[] = [
     hours: "To be confirmed / 要確認",
     fee: "To be confirmed / 要確認",
     notes: "Opening hours, closing days, services, and contact details are not yet confirmed.",
+  },
+  {
+    id: "konrinji-temple",
+    name: "Konrinji Temple / 金林寺",
+    category: "Culture",
+    summary:
+      "Gekkosan Konrinji (月光山金林寺) is reached by a long stone stairway leading up to the temple grounds and Yakushido hall. The stone approaches are known as Otoko-zaka and Onna-zaka. Comfortable walking shoes are recommended for the climb.",
+    googleMapsUrl: "https://maps.app.goo.gl/tKnBhVdtrgr5rTuPA",
+    imageUrl: "/images/spots/konrinji-yakushido-front.jpg",
+    imageAlt: "Front view of the Yakushido hall at Gekkosan Konrinji Temple",
+    images: [
+      "/images/spots/konrinji-yakushido-front.jpg",
+      "/images/spots/konrinji-stone-steps.jpg",
+      "/images/spots/konrinji-temple-grounds.jpg",
+      "/images/spots/konrinji-otoko-onna-zaka-sign.jpg",
+      "/images/spots/konrinji-entrance.jpg",
+    ],
+    hours: "To be confirmed / 要確認",
+    fee: "To be confirmed / 要確認",
+    notes:
+      "A long stone stairway leads to the temple grounds. Wear comfortable walking shoes. Visitor information is not yet confirmed.",
   },
   {
     id: "asahideyama-osugi",

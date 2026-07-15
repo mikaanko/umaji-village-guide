@@ -83,7 +83,7 @@ const requestedSpotGroups = [
   { name: "やまなみ食堂", ids: ["yamanami-shokudo"] },
   { name: "うまじのパン屋", ids: ["umapan-bakery"] },
   { name: "ゆずの森加工場", ids: ["yuzu-no-mori-factory"] },
-  { name: "金林寺", ids: [] },
+  { name: "金林寺", ids: ["konrinji-temple"] },
   { name: "まかいちょって家", ids: ["makaichotteya"] },
   { name: "五味隧道", ids: ["gomi-tunnel"] },
   { name: "朝日出山の大杉", ids: ["asahideyama-osugi"] },
