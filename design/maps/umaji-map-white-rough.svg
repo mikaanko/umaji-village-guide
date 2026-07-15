@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1400" viewBox="0 0 900 1400" role="img" aria-labelledby="title desc">
+  <title id="title">馬路村中心部 白地図ラフ</title>
+  <desc id="desc">Googleマイマップの登録10点、主要11名称を基準にした中心部の配置ラフ。</desc>
+  <defs>
+    <style>
+      .title{font:700 30px sans-serif;fill:#28352f}.sub{font:14px sans-serif;fill:#52635a}.label{font:600 17px sans-serif;fill:#28352f}.small{font:14px sans-serif;fill:#52635a}.tiny{font:12px sans-serif;fill:#65756c}.pin{fill:#fff;stroke:#d06a3e;stroke-width:4}.pin-core{fill:#d06a3e}.leader{fill:none;stroke:#78877f;stroke-width:2}.tbd{fill:#fffdf7;stroke:#c39648;stroke-width:2;stroke-dasharray:8 6}.water{fill:none;stroke:#a8dbea;stroke-width:32;stroke-linecap:round}.water-edge{fill:none;stroke:#7fc3d8;stroke-width:2}.road{fill:none;stroke:#b8aa94;stroke-width:12;stroke-linecap:round}.road-center{fill:none;stroke:#f6f2e9;stroke-width:2;stroke-dasharray:10 10}.forest{fill:#edf5e9;stroke:#d8e8d2;stroke-width:2}.panel{fill:#fff;stroke:#d8dfda;stroke-width:2}.inset{fill:#f8fbf6;stroke:#98ad9e;stroke-width:2;stroke-dasharray:8 6}
+    </style>
+  </defs>
+
+  <rect width="900" height="1400" fill="#fbfcfa"/>
+  <text x="50" y="58" class="title">馬路村中心部｜白地図ラフ</text>
+  <text x="50" y="87" class="sub">登録10点・主要11名称の配置確認用｜完成イラストではありません</text>
+
+  <path class="forest" d="M25 120H875V1125H25Z"/>
+  <path fill="#fff" d="M175 120C145 245 172 390 135 515C110 650 155 785 125 930C110 1000 130 1070 170 1125H730C770 1015 744 920 775 815C800 700 760 590 790 465C815 340 770 230 740 120Z"/>
+
+  <!-- River and principal road are schematic axes, not surveyed shapes. -->
+  <!-- The river centerline follows the strong S-bend visible in the supplied My Maps view. -->
+  <path id="yasuda-river-centerline" class="water" d="M555 135 C635 155 650 190 615 230 C575 275 425 270 365 320 C330 350 345 430 385 515 C425 600 455 690 472 770 C485 825 555 845 607 880 C640 905 642 965 610 1015 C585 1055 555 1080 535 1110"/>
+  <path class="water-edge" d="M555 135 C635 155 650 190 615 230 C575 275 425 270 365 320 C330 350 345 430 385 515 C425 600 455 690 472 770 C485 825 555 845 607 880 C640 905 642 965 610 1015 C585 1055 555 1080 535 1110"/>
+  <path id="route-12-centerline" class="road" d="M610 125 C690 160 698 205 660 250 C620 292 515 302 480 332 C445 375 485 470 520 555 C535 630 535 700 545 770 C555 825 635 845 670 890 C700 930 690 985 660 1030 C635 1065 615 1090 600 1120"/>
+  <path class="road-center" d="M610 125 C690 160 698 205 660 250 C620 292 515 302 480 332 C445 375 485 470 520 555 C535 630 535 700 545 770 C555 825 635 845 670 890 C700 930 690 985 660 1030 C635 1065 615 1090 600 1120"/>
+  <text x="525" y="165" class="small" transform="rotate(32 525 165)">安田川（概略）</text>
+  <text x="505" y="430" class="small" transform="rotate(70 505 430)">主要道路 12（正式名称 要確認）</text>
+  <text x="65" y="155" class="small">北 ↑</text>
+
+  <!-- My Maps has one shared registered point named "馬路森林鉄道 インクライン". -->
+  <g id="forest-railway-incline" data-lat="33.5569736" data-lng="134.0489913" data-svg-x="527.2" data-svg-y="176.5" data-registration="shared-point" transform="translate(527.2 176.5)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M527.2 176.5H330"/><rect x="55" y="142" width="275" height="70" rx="10" class="panel"/><text x="72" y="171" class="label">馬路村森林鉄道／インクライン</text><text x="72" y="194" class="tiny">マイマップ登録名: 馬路森林鉄道 インクライン</text>
+
+  <!--
+    Confirmed My Maps markers. All seven center-map pins use one linear projection:
+    x = 275 + (lng - 134.0466897) / (134.0494737 - 134.0466897) * 305
+    y = 205 + (33.5566774 - lat) / (33.5566774 - 33.5492511) * 715
+    Therefore larger longitude moves right, and larger latitude moves up.
+  -->
+  <g id="umaji-onsen" data-lat="33.5566774" data-lng="134.0491971" data-svg-x="549.7" data-svg-y="205.0" transform="translate(549.7 205.0)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M549.7 205H665"/><rect x="665" y="179" width="170" height="52" rx="10" class="panel"/><text x="680" y="211" class="label">うまじ温泉</text>
+
+  <g id="umaji-village-office" data-lat="33.5553234" data-lng="134.0481798" data-svg-x="438.2" data-svg-y="335.4" transform="translate(438.2 335.4)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M438.2 335.4H265"/><rect x="65" y="309" width="200" height="52" rx="10" class="panel"/><text x="82" y="341" class="label">馬路村役場</text>
+
+  <g id="yamanami-shokudo" data-lat="33.5554113" data-lng="134.0489555" data-svg-x="523.2" data-svg-y="326.9" transform="translate(523.2 326.9)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M523.2 326.9H610"/><rect x="610" y="292" width="220" height="70" rx="10" class="panel"/><text x="625" y="321" class="label">やまなみ食堂</text><text x="625" y="344" class="tiny">役場より北東・温泉より南西</text>
+
+  <g id="umaji-bakery" data-lat="33.5517314" data-lng="134.0478123" data-svg-x="398.0" data-svg-y="681.2" transform="translate(398.0 681.2)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M398 681.2H275"/><rect x="55" y="655" width="220" height="52" rx="10" class="panel"/><text x="72" y="687" class="label">うまじのパン屋</text>
+
+  <g id="yuzu-forest-factory" data-lat="33.5507789" data-lng="134.0477829" data-svg-x="394.8" data-svg-y="772.9" transform="translate(394.8 772.9)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M394.8 772.9H285"/><rect x="55" y="738" width="230" height="70" rx="10" class="panel"/><text x="72" y="767" class="label">ゆずの森加工場</text><text x="72" y="790" class="tiny">登録名: JA馬路村 柚子の森加工場</text>
+
+  <g id="kinrinji" data-lat="33.5504860" data-lng="134.0466897" data-svg-x="275.0" data-svg-y="801.1" transform="translate(275.0 801.1)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M275 801.1L210 846"/><rect x="55" y="831" width="155" height="52" rx="10" class="panel"/><text x="72" y="863" class="label">金林寺</text>
+
+  <g id="makaichotteya" data-lat="33.5497498" data-lng="134.0494737" data-projected-svg-x="580.0" data-projected-svg-y="872.0" data-svg-x="635.0" data-svg-y="872.0" data-display-adjustment="55px east toward roadside land" transform="translate(635.0 872.0)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M635 872H650"/><rect x="650" y="839" width="205" height="70" rx="10" class="panel"/><text x="666" y="868" class="label">まかいちょって家</text><text x="666" y="892" class="tiny">ふるさとセンター</text>
+
+  <g id="gomi-tunnel" data-lat="33.5492511" data-lng="134.0493940" data-svg-x="571.3" data-svg-y="920.0" transform="translate(571.3 920.0)"><circle r="13" class="pin"/><circle r="5" class="pin-core"/></g>
+  <path class="leader" d="M571.3 920H635"/><rect x="635" y="914" width="220" height="52" rx="10" class="panel"/><text x="650" y="946" class="label">五味隧道</text>
+
+  <text x="55" y="1090" class="tiny">※ ピン位置は登録座標比を基礎にし、ラベルのみ読みやすさのため左右へ移動。</text>
+
+  <!-- Outlying spot is intentionally separated instead of compressed into the center map. -->
+  <rect x="45" y="1155" width="810" height="185" rx="18" class="inset"/>
+  <text x="70" y="1192" class="label">郊外スポット｜中心部から車で移動</text>
+  <circle cx="210" cy="1262" r="10" fill="#d06a3e"/><text x="232" y="1268" class="small">中心部</text>
+  <path d="M310 1260H590" stroke="#98ad9e" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#none)"/>
+  <text x="405" y="1245" class="tiny">南東へ概算 約3.2km</text>
+  <g id="asahideyama-osugi" data-lat="33.5269934" data-lng="134.0696539" data-svg-x="635" data-svg-y="1262" data-projection="separate-inset-not-to-scale"><circle cx="635" cy="1262" r="15" fill="#fff" stroke="#637c55" stroke-width="4"/><circle cx="635" cy="1262" r="6" fill="#637c55"/></g>
+  <text x="665" y="1268" class="label">朝日出山の大杉</text>
+  <text x="70" y="1315" class="tiny">別枠は方向と距離感の案内用。中心部本図と同縮尺ではありません。</text>
+
+  <text x="50" y="1370" class="tiny">基準: 指定 Google マイマップ（2026-07-14確認）｜破線枠 = 要確認</text>
+</svg>
