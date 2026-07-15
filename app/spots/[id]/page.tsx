@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { spots } from "@/data/spots";
+import { rentalCyclePageCopy } from "@/data/rental-cycles";
 
 type SpotDetailPageProps = {
   params: Promise<{ id: string }>;
@@ -20,6 +21,7 @@ export default async function SpotDetailPage({ params }: SpotDetailPageProps) {
   }
 
   const images = spot.images ?? (spot.imageUrl ? [spot.imageUrl] : []);
+  const hasRentalCycle = spot.id === "umaji-onsen" || spot.id === "makaichotteya";
 
   return (
     <main>
@@ -31,6 +33,22 @@ export default async function SpotDetailPage({ params }: SpotDetailPageProps) {
         <h1>{spot.name}</h1>
         <p>{spot.summary}</p>
       </section>
+
+      {hasRentalCycle && (
+        <section className="section compact">
+          <aside className="rental-spot-notice">
+            <div>
+              <p className="eyebrow">{rentalCyclePageCopy.spotNotice.label}</p>
+              <h2 lang="en">{rentalCyclePageCopy.spotNotice.title.en}</h2>
+              <p className="spot-notice-ja" lang="ja">{rentalCyclePageCopy.spotNotice.title.ja}</p>
+            </div>
+            <Link className="detail-link" href="/guide/rental-cycle">
+              <span lang="en">{rentalCyclePageCopy.spotNotice.link.en}</span>
+              <small lang="ja">{rentalCyclePageCopy.spotNotice.link.ja}</small>
+            </Link>
+          </aside>
+        </section>
+      )}
 
       {images.length > 0 && (
         <section className="section compact">
