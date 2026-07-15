@@ -8,6 +8,7 @@ export type SpotCategory =
 export type Spot = {
   id: string;
   name: string;
+  nameEn?: string;
   category: SpotCategory;
   summary: string;
   googleMapsUrl: string;
@@ -122,6 +123,7 @@ export const spots: Spot[] = [
   {
     id: "umaji-onsen",
     name: "うまじ温泉",
+    nameEn: "Umaji Onsen",
     category: "Stay",
     summary:
       "A relaxing hot spring inn that can work as a gentle base for exploring the village.",

@@ -33,7 +33,7 @@ const mapSpots: MapSpot[] = [
   },
   {
     id: "umaji-onsen",
-    label: "うまじ温泉 / Umaji Hot Springs",
+    label: "うまじ温泉",
     position: { left: "27%", top: "14%", width: "19%", height: "17%" },
   },
   {

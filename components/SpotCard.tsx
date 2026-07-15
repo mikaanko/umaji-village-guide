@@ -27,7 +27,7 @@ export function SpotCard({ spot }: SpotCardProps) {
 
       <div className="spot-content">
         <div className="spot-title-row">
-          <h3>{spot.name}</h3>
+          <h3>{spot.nameEn ?? spot.name}</h3>
           <span className="category-chip small">{spot.category}</span>
         </div>
         <p>{spot.summary}</p>
