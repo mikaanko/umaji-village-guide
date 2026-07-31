@@ -1,6 +1,19 @@
 import { SpotCard } from "@/components/SpotCard";
 import { categories, spots } from "@/data/spots";
 
+const leadingSpotIds = [
+  "yuzu-no-mori-factory",
+  "umapan-bakery",
+  "yuzu-no-mori-market",
+  "gomi-tunnel",
+] as const;
+
+const leadingSpotIdSet = new Set<string>(leadingSpotIds);
+const spotsForDisplay = [
+  ...leadingSpotIds.flatMap((id) => spots.filter((spot) => spot.id === id)),
+  ...spots.filter((spot) => !leadingSpotIdSet.has(spot.id)),
+];
+
 export const metadata = {
   title: "Spots | Umaji Village Travel Guide",
 };
@@ -29,7 +42,7 @@ export default function SpotsPage() {
 
       <section className="section compact">
         <div className="spot-grid">
-          {spots.map((spot) => (
+          {spotsForDisplay.map((spot) => (
             <SpotCard key={spot.id} spot={spot} />
           ))}
         </div>
