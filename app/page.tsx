@@ -2,7 +2,25 @@ import Link from "next/link";
 import { categories, spots } from "@/data/spots";
 import { SpotCard } from "@/components/SpotCard";
 
-const featuredSpots = spots.slice(0, 3);
+const starterSpotIds = [
+  "yuzu-no-mori-factory",
+  "umapan-bakery",
+  "yuzu-no-mori-market",
+] as const;
+
+const featuredSpots = starterSpotIds.flatMap((id) => {
+  const spot = spots.find((candidate) => candidate.id === id);
+
+  if (!spot) {
+    return [];
+  }
+
+  return [
+    id === "yuzu-no-mori-factory"
+      ? { ...spot, name: "Yuzu no Mori Factory / ゆずの森加工場" }
+      : spot,
+  ];
+});
 
 export default function HomePage() {
   return (
