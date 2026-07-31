@@ -107,10 +107,10 @@ export default function IllustratedMapPage() {
         <div className="illustrated-map-wrap">
           <Image
             className="illustrated-map-image"
-            src="/images/map/umaji-illustrated-guide-map.png"
+            src="/images/map/umaji-village-guide-map.png"
             alt="馬路村の観光スポットを描いたイラストガイドマップ"
-            width={1511}
-            height={1041}
+            width={1448}
+            height={1086}
             sizes="(min-width: 1500px) 1436px, calc(100vw - 36px)"
             priority
           />
@@ -136,7 +136,7 @@ export default function IllustratedMapPage() {
 
         <a
           className="map-enlarge-link"
-          href="/images/map/umaji-illustrated-guide-map.png"
+          href="/images/map/umaji-village-guide-map.png"
           target="_blank"
           rel="noopener noreferrer"
         >
