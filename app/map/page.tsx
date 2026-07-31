@@ -24,52 +24,62 @@ const mapSpots: MapSpot[] = [
   {
     id: "umaji-forest-railway",
     label: "馬路村森林鉄道 / Umaji Forest Railway",
-    position: { left: "3%", top: "14%", width: "11.5%", height: "17%" },
+    position: { left: "4%", top: "21.5%", width: "9%", height: "6.5%" },
   },
   {
     id: "umaji-incline",
     label: "インクライン / Incline",
-    position: { left: "14.5%", top: "14%", width: "11.5%", height: "17%" },
+    position: { left: "13%", top: "21.5%", width: "7%", height: "6.5%" },
   },
   {
     id: "umaji-onsen",
     label: "うまじ温泉",
-    position: { left: "27%", top: "14%", width: "19%", height: "17%" },
+    position: { left: "33.5%", top: "17.5%", width: "12%", height: "6%" },
   },
   {
     id: "umaji-village-office",
     label: "馬路村役場 / Umaji Village Office",
-    position: { left: "29%", top: "30%", width: "19%", height: "19%" },
+    position: { left: "31.3%", top: "32.4%", width: "13.8%", height: "6%" },
   },
   {
     id: "yamanami-shokudo",
     label: "やまなみ食堂 / Yamanami Shokudo",
-    position: { left: "49%", top: "31%", width: "21%", height: "17%" },
+    position: { left: "51.7%", top: "33.3%", width: "13.7%", height: "6%" },
+  },
+  {
+    id: "yuzu-no-mori-market",
+    label: "ゆずの森直売所 / Yuzu no Mori Market",
+    position: { left: "4.2%", top: "52.6%", width: "13%", height: "6%" },
   },
   {
     id: "umapan-bakery",
     label: "うまじのパン屋 / Umaji Bakery",
-    position: { left: "15%", top: "49%", width: "20%", height: "17%" },
+    position: { left: "5.4%", top: "58.2%", width: "11.4%", height: "6%" },
   },
   {
     id: "yuzu-no-mori-factory",
     label: "ゆずの森加工場 / Yuzu no Mori Factory",
-    position: { left: "8%", top: "61%", width: "25%", height: "14%" },
+    position: { left: "7.7%", top: "65.1%", width: "14.2%", height: "6%" },
+  },
+  {
+    id: "konrinji-temple",
+    label: "金林寺 / Konrinji Temple",
+    position: { left: "3.6%", top: "73.2%", width: "11%", height: "6%" },
   },
   {
     id: "makaichotteya",
     label: "まかいちょって家 / Makaichotteya",
-    position: { left: "34%", top: "61%", width: "19%", height: "21%" },
+    position: { left: "36.6%", top: "62%", width: "10.5%", height: "6.5%" },
   },
   {
     id: "gomi-tunnel",
     label: "五味隧道 / Gomi Tunnel",
-    position: { left: "29%", top: "81%", width: "19%", height: "14%" },
+    position: { left: "32.1%", top: "84.2%", width: "10.5%", height: "6%" },
   },
   {
     id: "asahideyama-osugi",
     label: "朝日出山の大杉 / Mt. Asahideyama Osugi",
-    position: { left: "75%", top: "18%", width: "23%", height: "76%" },
+    position: { left: "75.5%", top: "71.2%", width: "21%", height: "19%" },
   },
 ];
 
@@ -82,6 +92,7 @@ const requestedSpotGroups = [
   { name: "馬路村役場", ids: ["umaji-village-office"] },
   { name: "やまなみ食堂", ids: ["yamanami-shokudo"] },
   { name: "うまじのパン屋", ids: ["umapan-bakery"] },
+  { name: "ゆずの森直売所", ids: ["yuzu-no-mori-market"] },
   { name: "ゆずの森加工場", ids: ["yuzu-no-mori-factory"] },
   { name: "金林寺", ids: ["konrinji-temple"] },
   { name: "まかいちょって家", ids: ["makaichotteya"] },
@@ -126,12 +137,6 @@ export default function IllustratedMapPage() {
             />
           ))}
 
-          <span
-            className="map-hotspot map-hotspot-unavailable"
-            aria-label="金林寺（詳細ページ未登録）"
-            data-label="金林寺（詳細ページ未登録）"
-            style={{ left: "3%", top: "70%", width: "23%", height: "21%" }}
-          />
         </div>
 
         <a
