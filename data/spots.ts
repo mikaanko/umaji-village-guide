@@ -8,7 +8,6 @@ export type SpotCategory =
 export type Spot = {
   id: string;
   name: string;
-  nameEn?: string;
   category: SpotCategory;
   summary: string;
   googleMapsUrl?: string;
@@ -51,7 +50,7 @@ export const spots: Spot[] = [
   },
   {
     id: "umapan-bakery",
-    name: "Umapan Bakery",
+    name: "Umapan Bakery / うまじのパン屋",
     category: "Food",
     summary:
       "A local bakery stop in Umaji with an easy roadside exterior and recognizable shop sign.",
@@ -68,7 +67,7 @@ export const spots: Spot[] = [
   },
   {
     id: "yuzu-no-mori-market",
-    name: "Yuzu no Mori Market",
+    name: "Yuzu no Mori Shop / ゆずの森直売所",
     category: "Shopping",
     summary:
       "A visitor-friendly direct sales stop for yuzu products and local souvenirs from Umaji Village.",
@@ -86,7 +85,7 @@ export const spots: Spot[] = [
   },
   {
     id: "yuzu-no-mori-factory",
-    name: "Yuzu no Mori Factory",
+    name: "Yuzu no Mori Factory / ゆずの森加工場",
     category: "Culture",
     summary:
       "A production-site stop connected to Umaji's yuzu processing and village identity.",
@@ -104,7 +103,7 @@ export const spots: Spot[] = [
   },
   {
     id: "common-parking-access",
-    name: "Common Parking and Access",
+    name: "Shared Parking and Access / 共用駐車場・アクセス",
     category: "Culture",
     summary:
       "Shared parking and approach guidance for visitors arriving by car and walking into the area.",
@@ -122,8 +121,7 @@ export const spots: Spot[] = [
   },
   {
     id: "umaji-onsen",
-    name: "うまじ温泉",
-    nameEn: "Umaji Onsen",
+    name: "Umaji Onsen / 馬路温泉",
     category: "Stay",
     summary:
       "A relaxing hot spring inn that can work as a gentle base for exploring the village.",
@@ -141,7 +139,7 @@ export const spots: Spot[] = [
   },
   {
     id: "umaji-village-office",
-    name: "馬路村役場",
+    name: "Umaji Village Office / 馬路村役場",
     category: "Culture",
     summary: "The village office in central Umaji. The current main photo is temporary while exterior construction is underway.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Umaji+Village+Office",
@@ -158,7 +156,7 @@ export const spots: Spot[] = [
   },
   {
     id: "yamanami-shokudo",
-    name: "やまなみ食堂",
+    name: "Yamanami Restaurant / やまなみ食堂",
     category: "Food",
     summary: "A local dining spot in Umaji Village.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Yamanami+Shokudo+Umaji",
@@ -175,7 +173,7 @@ export const spots: Spot[] = [
   },
   {
     id: "umaji-forest-railway",
-    name: "馬路村森林鉄道",
+    name: "Umaji Forest Railway / 馬路森林鉄道",
     category: "Culture",
     summary: "A forest railway attraction connected to Umaji Village's timber heritage.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Umaji+Forest+Railway",
@@ -192,7 +190,7 @@ export const spots: Spot[] = [
   },
   {
     id: "umaji-incline",
-    name: "インクライン",
+    name: "Umaji Incline / インクライン",
     category: "Culture",
     summary: "An incline attraction set against Umaji's mountain landscape.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Umaji+Incline",
@@ -208,7 +206,7 @@ export const spots: Spot[] = [
   },
   {
     id: "makaichotteya",
-    name: "まかいちょって家",
+    name: "Makaichotteya Visitor Center / まかいちょって家",
     category: "Shopping",
     summary: "A village stop with visitor information visible at the entrance.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Makaichotteya+Umaji",
@@ -247,7 +245,7 @@ export const spots: Spot[] = [
   },
   {
     id: "asahideyama-osugi",
-    name: "朝日出山の大杉",
+    name: "Great Cedar of Mount Asahide / 朝日出山の大杉",
     category: "Nature",
     summary: "A monumental cedar whose height and powerful trunk stand out in the forest setting.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Asahideyama+Osugi+Umaji",

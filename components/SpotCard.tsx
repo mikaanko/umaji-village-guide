@@ -1,4 +1,5 @@
 import type { Spot } from "@/data/spots";
+import { SpotName } from "@/components/SpotName";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,7 +28,7 @@ export function SpotCard({ spot }: SpotCardProps) {
 
       <div className="spot-content">
         <div className="spot-title-row">
-          <h3>{spot.nameEn ?? spot.name}</h3>
+          <SpotName level={3} name={spot.name} />
           <span className="category-chip small">{spot.category}</span>
         </div>
         <p>{spot.summary}</p>

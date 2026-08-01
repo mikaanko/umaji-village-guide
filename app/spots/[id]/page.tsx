@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { spots } from "@/data/spots";
 import { rentalCyclePageCopy } from "@/data/rental-cycles";
+import { SpotName } from "@/components/SpotName";
 
 type SpotDetailPageProps = {
   params: Promise<{ id: string }>;
@@ -30,7 +31,7 @@ export default async function SpotDetailPage({ params }: SpotDetailPageProps) {
           Back to all spots
         </Link>
         <span className="category-chip small">{spot.category}</span>
-        <h1>{spot.name}</h1>
+        <SpotName level={1} name={spot.name} />
         <p>{spot.summary}</p>
       </section>
 
