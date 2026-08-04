@@ -171,7 +171,10 @@ export default function IllustratedMapPage() {
               .filter((spot) => spot !== undefined);
 
             return (
-              <li className="map-spot-list-item" key={group.name}>
+              <li
+                className={`map-spot-list-item${groupSpots.length > 1 ? " map-spot-list-item-multiple" : ""}`}
+                key={group.name}
+              >
                 <div>
                   <h3>{group.name}</h3>
                   {groupSpots.length > 0 ? (
