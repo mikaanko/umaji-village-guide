@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CookieConsent } from "@/components/CookieConsent";
+import { CookieSettingsButton } from "@/components/CookieSettingsButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,6 +28,16 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
+        <footer className="site-footer">
+          <div className="site-footer-inner">
+            <p>Umaji Village Guide</p>
+            <nav aria-label="Footer navigation">
+              <Link href="/privacy">Privacy Policy / プライバシーポリシー</Link>
+              <CookieSettingsButton />
+            </nav>
+          </div>
+        </footer>
+        <CookieConsent />
       </body>
     </html>
   );
