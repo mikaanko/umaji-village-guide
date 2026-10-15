@@ -1,5 +1,90 @@
 # Umaji Village Guide 作業引き継ぎ
 
+## 2026年10月15日
+
+### 作業状況
+
+- 作業ブランチ: `feature/analytics-privacy`
+- 施設情報更新とやまなみ食堂の掲載終了を保存したコミット: `7489421`（`施設情報を更新しやまなみ食堂の掲載を終了`）
+- 作業完了後、GitHubの `feature/analytics-privacy` へpushして自宅Mac miniで継続できる状態にする
+- `main`には未マージ
+- Vercel Productionには未反映。作業ブランチのpushでPreviewが作成される可能性はあるが、Productionは変更しない
+
+### 施設情報の更新
+
+- ゆずの森加工場: 営業時間、年末年始休業、入場無料、個人見学の予約不要を英語で反映
+- ゆずの森直売所: 8:30〜17:00と年末年始休業を英語で反映
+- うまじのパン屋: 水〜日曜日9:00〜18:00、月・火曜日定休、売り切れ時の早期閉店を英語で反映
+- 馬路温泉: 日帰り入浴、レストラン昼夜営業時間・L.O.、チェックイン・チェックアウトを英語で反映
+- まかいちょって家: 9:00〜17:00と年末年始休業を英語で反映
+- 馬路森林鉄道: 8:30〜16:30、日曜・祝日運行、8月は特別運行期間中のみ毎日運行と明記
+- 森林鉄道インクライン: 8:30〜16:30、日曜・祝日運行、8月毎日運行を英語で反映
+- 確認できない料金は推測せず、既存の「要確認」表示を維持
+- レンタサイクルの料金・時間・台数・利用条件は変更していない
+
+### やまなみ食堂の掲載終了
+
+- `data/spots.ts` からスポット定義を削除し、スポット一覧と個別詳細ページの生成対象から除外
+- 地図ページのホットスポットと詳細リンク一覧から削除
+- 公開対象のトップページ、一覧、地図、関連リンクに「yamanami / やまなみ」の参照が残っていないことを確認
+- 旧詳細URL `/spots/yamanami-shokudo` は404になることを確認
+- 関連写真3枚は削除せず `public/images/spots/` に保持
+- 非公開の地図設計資料とラフSVGは履歴資料として保持
+
+### 地図画像の局所修正
+
+- Gitの元画像（コミット `f74fc7d`）を基準に使用
+- 「Yamanami Shokudo / やまなみ食堂」のラベルとアイコン周辺だけを森の背景で補完
+- 最終画像のサイズは `1448 x 1086`
+- 変更ピクセルは19,851個（全体の1.2624%）
+- 変更範囲は `x=731〜958, y=351〜440`
+- 指定領域外の変更が0ピクセルであることを元画像とのピクセル比較で確認
+- 以前の画像全体が再描画された版は不採用
+- 回復が必要な場合、Git履歴の `f74fc7d:public/images/map/umaji-village-guide-map.png` から元画像を取得できる
+
+### 検証結果
+
+- `npm run lint`: 成功
+- `npm run typecheck`: 成功
+- `npm run build`: 成功
+- 全19ページの静的生成に成功
+- スポット詳細ページは12件で、やまなみ食堂のみ生成対象から減っている
+- `git diff --check`: 問題なし
+- 運営者情報の仮表記、GA4、Cookie同意機能に変更なし
+
+### 自宅Mac miniでの再開手順
+
+既存のcloneがある場合は、現在の変更を上書きしないよう先に `git status` を確認する。
+
+```bash
+cd /path/to/umaji-village-guide
+git status
+git fetch origin
+git switch feature/analytics-privacy
+git pull --ff-only
+npm ci
+npm run dev
+```
+
+新規にcloneする場合:
+
+```bash
+git clone https://github.com/mikaanko/umaji-village-guide.git
+cd umaji-village-guide
+git switch --track origin/feature/analytics-privacy
+npm ci
+npm run dev
+```
+
+### 次回作業の注意事項
+
+- 必ず `feature/analytics-privacy` で作業し、`main` に直接コミットしない
+- 地図画像は指定領域外0ピクセル変更の最終版を維持し、画像全体をAIで再描画した版に戻さない
+- 運営者情報は引き続き `Umaji Village Guide（temporary / 仮）`。正式情報が確定するまで変更しない
+- GA4測定ID `G-40Z67K4F4K` とCookie同意機能を変更しない
+- VercelのProductionブランチは `main`。作業ブランチのPreviewとProductionを取り違えない
+- 開発サーバー終了時は `Ctrl+C` で停止し、ポート3000にプロセスが残っていないことを確認
+
 ## 2026年10月14日
 
 ### 作業状況
