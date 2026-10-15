@@ -42,11 +42,6 @@ const mapSpots: MapSpot[] = [
     position: { left: "31.3%", top: "32.4%", width: "13.8%", height: "6%" },
   },
   {
-    id: "yamanami-shokudo",
-    label: "やまなみ食堂 / Yamanami Shokudo",
-    position: { left: "51.7%", top: "33.3%", width: "13.7%", height: "6%" },
-  },
-  {
     id: "yuzu-no-mori-market",
     label: "ゆずの森直売所 / Yuzu no Mori Market",
     position: { left: "4.2%", top: "52.6%", width: "13%", height: "6%" },
@@ -90,7 +85,6 @@ const requestedSpotGroups = [
   },
   { name: "うまじ温泉", ids: ["umaji-onsen"] },
   { name: "馬路村役場", ids: ["umaji-village-office"] },
-  { name: "やまなみ食堂", ids: ["yamanami-shokudo"] },
   { name: "うまじのパン屋", ids: ["umapan-bakery"] },
   { name: "ゆずの森直売所", ids: ["yuzu-no-mori-market"] },
   { name: "ゆずの森加工場", ids: ["yuzu-no-mori-factory"] },
