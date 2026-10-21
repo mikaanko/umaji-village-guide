@@ -77,8 +77,8 @@ export default async function SpotDetailPage({ params }: SpotDetailPageProps) {
           </dl>
         )}
         <div className="spot-detail-map-links">
-          <Link className="detail-link" href={`/map#map-${spot.id}`}>
-            View on illustrated map<br />
+          <Link className="detail-link illustrated-map-link" href={`/map#map-${spot.id}`}>
+            <span>View on illustrated map</span>
             <span lang="ja">イラストマップで見る</span>
           </Link>
           {spot.googleMapsUrl && (

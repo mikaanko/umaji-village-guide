@@ -530,6 +530,12 @@ h3 {
   line-height: 1.35;
 }
 
+.spot-detail-map-links .illustrated-map-link {
+  flex-direction: column;
+  gap: 2px;
+  padding-block: 10px;
+}
+
 .map-page {
   width: min(1500px, 100%);
 }

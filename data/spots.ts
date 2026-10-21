@@ -51,7 +51,7 @@ export const spots: Spot[] = [
     name: "Umapan Bakery / うまじのパン屋",
     category: "Food",
     summary:
-      "A local bakery stop in Umaji with an easy roadside exterior and recognizable shop sign.",
+      "A small local bakery in Umaji Village, offering freshly baked bread and a warm welcome to visitors.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Umapan+Umaji",
     imageUrl: "/images/spots/umapan-shop-exterior-01.jpg",
     imageAlt: "Exterior view of Umapan Bakery in Umaji Village",
