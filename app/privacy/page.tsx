@@ -15,19 +15,20 @@ export default function PrivacyPage() {
         <p lang="ja" className="privacy-title-ja">
           プライバシーポリシー
         </p>
-        <p>Last updated: October 14, 2026 / 最終更新日：2026年10月14日</p>
+        <p>Last updated: October 21, 2026 / 最終更新日：2026年10月21日</p>
       </section>
 
       <article className="privacy-content">
         <section>
-          <h2>1. About this policy</h2>
+          <h2>1. About this policy / 本ポリシーについて</h2>
           <p>
             This policy explains how {siteConfig.name} handles information when
-            you use this website. The current operator is listed as {siteConfig.operatorName}.
-            The formal operating entity will be added after confirmation.
+            you use this website. This website is operated by{" "}
+            {siteConfig.operator.nameEn} ({siteConfig.operator.nameJa}).
           </p>
           <p lang="ja">
-            本ポリシーは、本サイトの利用時に取り扱う情報について説明するものです。現在の運営者表記は「{siteConfig.operatorName}」です。正式な運営主体は確認後に追記します。
+            本ポリシーは、本サイトの利用時に取り扱う情報について説明するものです。本サイトの運営者は、
+            {siteConfig.operator.nameJa}（{siteConfig.operator.nameEn}）です。
           </p>
         </section>
 
@@ -107,20 +108,17 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2>7. Contact</h2>
-          {siteConfig.contact ? (
-            <p>{siteConfig.contact}</p>
-          ) : (
-            <>
-              <p>
-                Contact details are being confirmed and will be published here
-                when available.
-              </p>
-              <p lang="ja">
-                問い合わせ先は現在確認中です。確定後、このページに掲載します。
-              </p>
-            </>
-          )}
+          <h2>7. Contact / お問い合わせ</h2>
+          <p>
+            Contact: {siteConfig.operator.nameEn}
+            <br />
+            Telephone: {siteConfig.operator.phone}
+          </p>
+          <p lang="ja">
+            お問い合わせ先：{siteConfig.operator.nameJa}
+            <br />
+            電話：{siteConfig.operator.phone}
+          </p>
         </section>
       </article>
     </main>

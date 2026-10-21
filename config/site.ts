@@ -1,5 +1,8 @@
 export const siteConfig = {
   name: "Umaji Village Guide",
-  operatorName: "Umaji Village Guide（temporary / 仮）",
-  contact: null,
+  operator: {
+    nameEn: "Umaji Bakery",
+    nameJa: "うまじのパン屋",
+    phone: "0887-44-2555",
+  },
 } as const;
