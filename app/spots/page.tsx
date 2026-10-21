@@ -22,11 +22,11 @@ export default function SpotsPage() {
   return (
     <main>
       <section className="page-title">
-        <p className="eyebrow">Draft spot list</p>
+        <p className="eyebrow">Visitor spot guide</p>
         <h1>Places to Visit</h1>
         <p>
-          Each card keeps map access visible and supports unconfirmed opening
-          hours, fees, notes, and missing photos.
+          Browse places around Umaji Village, with practical details, photos,
+          and quick access to Google Maps.
         </p>
       </section>
 

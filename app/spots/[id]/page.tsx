@@ -69,11 +69,13 @@ export default async function SpotDetailPage({ params }: SpotDetailPageProps) {
       )}
 
       <section className="section compact spot-detail-info">
-        <dl className="spot-details">
-          <div><dt>Hours</dt><dd>{spot.hours}</dd></div>
-          <div><dt>Fee</dt><dd>{spot.fee}</dd></div>
-          <div><dt>Notes</dt><dd>{spot.notes}</dd></div>
-        </dl>
+        {(spot.hours || spot.fee || spot.notes) && (
+          <dl className="spot-details">
+            {spot.hours && <div><dt>Hours</dt><dd>{spot.hours}</dd></div>}
+            {spot.fee && <div><dt>Fee</dt><dd>{spot.fee}</dd></div>}
+            {spot.notes && <div><dt>Notes</dt><dd>{spot.notes}</dd></div>}
+          </dl>
+        )}
         <div className="spot-detail-map-links">
           <Link className="detail-link" href={`/map#map-${spot.id}`}>
             View on illustrated map<br />

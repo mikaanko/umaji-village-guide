@@ -6,7 +6,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Umaji Village Travel Guide",
-  description: "A draft English travel guide for Umaji Village, Kochi.",
+  description:
+    "A practical English travel guide to places, local food, nature, and culture in Umaji Village, Kochi.",
 };
 
 export default function RootLayout({
