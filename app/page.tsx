@@ -27,21 +27,21 @@ export default function HomePage() {
     <main>
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">Draft visitor guide</p>
+          <p className="eyebrow">Welcome to Umaji</p>
           <h1>Umaji Village Travel Guide</h1>
           <p>
-            A compact, mobile-first guide for international visitors. Spot
-            details are draft data and can be replaced as photos and confirmed
-            information become available.
+            Discover places to visit, local food, nature, and cultural sites
+            around Umaji Village, with practical information and map links to
+            help you plan your trip.
           </p>
           <Link className="primary-link" href="/spots">
             Browse spots
           </Link>
         </div>
         <div className="hero-panel" aria-label="Guide highlights">
-          <span>Maps first</span>
-          <strong>{spots.length} draft spots</strong>
-          <span>Photos optional</span>
+          <span>Quick map access</span>
+          <strong>{spots.length} places to explore</strong>
+          <span>Practical travel details</span>
         </div>
       </section>
 
@@ -63,7 +63,7 @@ export default function HomePage() {
         <div className="section-heading with-action">
           <div>
             <p className="eyebrow">Featured</p>
-            <h2>Starter spots</h2>
+            <h2>Featured spots</h2>
           </div>
           <Link className="text-link" href="/spots">
             View all

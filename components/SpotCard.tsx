@@ -19,9 +19,9 @@ export function SpotCard({ spot }: SpotCardProps) {
             sizes="(min-width: 1040px) 352px, (min-width: 720px) 50vw, 100vw"
           />
         ) : (
-          <div className="image-placeholder" aria-label="Photo not set">
+          <div className="image-placeholder" aria-label="Photo unavailable">
             <span>{spot.category}</span>
-            <strong>Photo coming soon</strong>
+            <strong>Photo unavailable</strong>
           </div>
         )}
       </div>
@@ -33,20 +33,28 @@ export function SpotCard({ spot }: SpotCardProps) {
         </div>
         <p>{spot.summary}</p>
 
-        <dl className="spot-details">
-          <div>
-            <dt>Hours</dt>
-            <dd>{spot.hours}</dd>
-          </div>
-          <div>
-            <dt>Fee</dt>
-            <dd>{spot.fee}</dd>
-          </div>
-          <div>
-            <dt>Notes</dt>
-            <dd>{spot.notes}</dd>
-          </div>
-        </dl>
+        {(spot.hours || spot.fee || spot.notes) && (
+          <dl className="spot-details">
+            {spot.hours && (
+              <div>
+                <dt>Hours</dt>
+                <dd>{spot.hours}</dd>
+              </div>
+            )}
+            {spot.fee && (
+              <div>
+                <dt>Fee</dt>
+                <dd>{spot.fee}</dd>
+              </div>
+            )}
+            {spot.notes && (
+              <div>
+                <dt>Notes</dt>
+                <dd>{spot.notes}</dd>
+              </div>
+            )}
+          </dl>
+        )}
 
         <div className="spot-actions">
           <Link className="detail-link" href={`/spots/${spot.id}`}>

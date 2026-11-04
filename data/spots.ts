@@ -14,9 +14,9 @@ export type Spot = {
   imageUrl?: string;
   imageAlt?: string;
   images?: string[];
-  hours: string;
-  fee: string;
-  notes: string;
+  hours?: string;
+  fee?: string;
+  notes?: string;
 };
 
 export const categories: SpotCategory[] = [
@@ -43,17 +43,15 @@ export const spots: Spot[] = [
       "/images/spots/gomi-tunnel-sign-01.jpg",
       "/images/spots/gomi-tunnel-no-entry-01.jpg",
     ],
-    hours: "Viewable from outside. Follow local signs.",
-    fee: "Free exterior viewing.",
     notes:
-      "Tunnel entry is prohibited. Please view the site from outside and follow local signs.",
+      "Free to view from outside. Tunnel entry is prohibited. Please follow local signs.",
   },
   {
     id: "umapan-bakery",
     name: "Umapan Bakery / うまじのパン屋",
     category: "Food",
     summary:
-      "A local bakery stop in Umaji with an easy roadside exterior and recognizable shop sign.",
+      "A small local bakery in Umaji Village, offering freshly baked bread and a warm welcome to visitors.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Umapan+Umaji",
     imageUrl: "/images/spots/umapan-shop-exterior-01.jpg",
     imageAlt: "Exterior view of Umapan Bakery in Umaji Village",
@@ -61,9 +59,9 @@ export const spots: Spot[] = [
       "/images/spots/umapan-shop-exterior-01.jpg",
       "/images/spots/umapan-shop-sign-01.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "Menu prices to be confirmed / 要確認",
-    notes: "Use exterior as the main photo and the shop sign as a secondary view.",
+    hours:
+      "Wednesday–Sunday, 9:00–18:00. Closed Monday and Tuesday. May close early if sold out.",
+    notes: "The photos above show the shop exterior and shop sign.",
   },
   {
     id: "yuzu-no-mori-market",
@@ -79,9 +77,8 @@ export const spots: Spot[] = [
       "/images/spots/yuzu-mori-market-exterior-01.jpg",
       "/images/spots/yuzu-mori-market-entrance-01.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "Free entry, purchases optional. Details to be confirmed / 要確認",
-    notes: "Use the exterior as the main photo and the entrance as a secondary view.",
+    hours: "8:30–17:00. Closed during the year-end and New Year holidays.",
+    notes: "The photos above show the shop exterior and entrance.",
   },
   {
     id: "yuzu-no-mori-factory",
@@ -97,9 +94,10 @@ export const spots: Spot[] = [
       "/images/spots/yuzu-mori-factory-exterior-01.jpg",
       "/images/spots/yuzu-mori-factory-entrance-01.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "Exterior visit information to be confirmed / 要確認",
-    notes: "Use the exterior as the main photo and the entrance as a secondary view.",
+    hours: "9:00–16:00. Closed during the year-end and New Year holidays.",
+    fee: "Free admission.",
+    notes:
+      "Individual visitors do not need a reservation. The photos above show the approach and entrance.",
   },
   {
     id: "common-parking-access",
@@ -115,9 +113,7 @@ export const spots: Spot[] = [
       "/images/spots/common-parking-path-01.jpg",
       "/images/spots/common-parking-01.jpg",
     ],
-    hours: "Open access point. On-site signs should still be checked / 要確認",
-    fee: "Parking conditions to be confirmed / 要確認",
-    notes: "Use the walking path as the main photo and the parking area as a secondary view.",
+    notes: "The photos above show the walking approach and shared parking area.",
   },
   {
     id: "umaji-onsen",
@@ -133,15 +129,15 @@ export const spots: Spot[] = [
       "/images/spots/umaji-onsen-exterior.jpg",
       "/images/spots/umaji-onsen-entrance.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "To be confirmed / 要確認",
-    notes: "Draft listing. Confirm bathing hours, lodging availability, and access.",
+    hours:
+      "Day-use bathing: 10:00–21:00. Restaurant: lunch 11:00–14:00 (last order 13:30); dinner 17:00–21:00 (last order 20:30). Lodging: check-in from 15:00; check-out by 10:00.",
+    notes: "Day-use bathing, restaurant, and lodging hours are listed above.",
   },
   {
     id: "umaji-village-office",
     name: "Umaji Village Office / 馬路村役場",
     category: "Culture",
-    summary: "The village office in central Umaji. The current main photo is temporary while exterior construction is underway.",
+    summary: "The village office in central Umaji.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Umaji+Village+Office",
     imageUrl: "/images/spots/umaji-village-office-sign.jpg",
     imageAlt: "馬路村役場の案内表示",
@@ -150,26 +146,8 @@ export const spots: Spot[] = [
       "/images/spots/umaji-village-office-exterior.jpg",
       "/images/spots/umaji-village-office-entrance.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "To be confirmed / 要確認",
-    notes: "Temporary exterior photo during construction. Replace the main image later using the same filename.",
-  },
-  {
-    id: "yamanami-shokudo",
-    name: "Yamanami Restaurant / やまなみ食堂",
-    category: "Food",
-    summary: "A local dining spot in Umaji Village.",
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Yamanami+Shokudo+Umaji",
-    imageUrl: "/images/spots/yamanami-shokudo-sign.jpg",
-    imageAlt: "やまなみ食堂の看板",
-    images: [
-      "/images/spots/yamanami-shokudo-sign.jpg",
-      "/images/spots/yamanami-shokudo-exterior.jpg",
-      "/images/spots/yamanami-shokudo-entrance.jpg",
-    ],
-    hours: "To be confirmed / 要確認",
-    fee: "To be confirmed / 要確認",
-    notes: "Opening hours, closing days, menu prices, and contact details are not yet confirmed.",
+    notes:
+      "The photos show the building exterior with construction scaffolding at the time they were taken.",
   },
   {
     id: "umaji-forest-railway",
@@ -184,9 +162,8 @@ export const spots: Spot[] = [
       "/images/spots/umaji-forest-railway-front.jpg",
       "/images/spots/umaji-forest-railway-track.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "To be confirmed / 要確認",
-    notes: "Operating dates, times, fares, and contact details are not yet confirmed.",
+    hours:
+      "8:30–16:30. Operates on Sundays and national holidays. In August, it runs daily only during the special operating period.",
   },
   {
     id: "umaji-incline",
@@ -200,9 +177,8 @@ export const spots: Spot[] = [
       "/images/spots/umaji-incline-main.jpg",
       "/images/spots/umaji-incline-sign.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "To be confirmed / 要確認",
-    notes: "Operating dates, times, fares, and contact details are not yet confirmed.",
+    hours:
+      "8:30–16:30. Operates on Sundays and national holidays; runs daily in August.",
   },
   {
     id: "makaichotteya",
@@ -218,9 +194,9 @@ export const spots: Spot[] = [
       "/images/spots/makaichotteya-sign.jpg",
       "/images/spots/makaichotteya-rental-bike.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "To be confirmed / 要確認",
-    notes: "Opening hours, closing days, services, and contact details are not yet confirmed.",
+    hours: "9:00–17:00. Closed during the year-end and New Year holidays.",
+    notes:
+      "Bicycle rental is available; see the separate rental guide for confirmed prices and conditions.",
   },
   {
     id: "konrinji-temple",
@@ -238,10 +214,8 @@ export const spots: Spot[] = [
       "/images/spots/konrinji-otoko-onna-zaka-sign.jpg",
       "/images/spots/konrinji-entrance.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "To be confirmed / 要確認",
     notes:
-      "A long stone stairway leads to the temple grounds. Wear comfortable walking shoes. Visitor information is not yet confirmed.",
+      "A long stone stairway leads to the temple grounds. Wear comfortable walking shoes.",
   },
   {
     id: "asahideyama-osugi",
@@ -258,8 +232,5 @@ export const spots: Spot[] = [
       "/images/spots/asahideyama-osugi-trailhead.jpg",
       "/images/spots/asahideyama-osugi-information.jpg",
     ],
-    hours: "To be confirmed / 要確認",
-    fee: "To be confirmed / 要確認",
-    notes: "Access conditions, address, and visitor guidance are not yet confirmed.",
   },
 ];

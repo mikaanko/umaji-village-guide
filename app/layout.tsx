@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CookieConsent } from "@/components/CookieConsent";
+import { CookieSettingsButton } from "@/components/CookieSettingsButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Umaji Village Travel Guide",
-  description: "A draft English travel guide for Umaji Village, Kochi.",
+  description:
+    "A practical English travel guide to places, local food, nature, and culture in Umaji Village, Kochi.",
 };
 
 export default function RootLayout({
@@ -26,6 +29,16 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
+        <footer className="site-footer">
+          <div className="site-footer-inner">
+            <p>Umaji Village Guide</p>
+            <nav aria-label="Footer navigation">
+              <Link href="/privacy">Privacy Policy / プライバシーポリシー</Link>
+              <CookieSettingsButton />
+            </nav>
+          </div>
+        </footer>
+        <CookieConsent />
       </body>
     </html>
   );
