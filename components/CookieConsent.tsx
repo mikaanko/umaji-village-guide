@@ -45,11 +45,24 @@ function subscribeToConsent(onStoreChange: () => void) {
 }
 
 function getConsentSnapshot(): Consent {
-  const storedConsent = window.localStorage.getItem(consentStorageKey);
+  try {
+    const storedConsent = window.localStorage.getItem(consentStorageKey);
 
-  return storedConsent === "accepted" || storedConsent === "rejected"
-    ? storedConsent
-    : null;
+    return storedConsent === "accepted" || storedConsent === "rejected"
+      ? storedConsent
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+function storeConsent(choice: Exclude<Consent, null>) {
+  try {
+    window.localStorage.setItem(consentStorageKey, choice);
+    return window.localStorage.getItem(consentStorageKey) === choice;
+  } catch {
+    return false;
+  }
 }
 
 function getServerConsentSnapshot(): Consent {
@@ -57,12 +70,14 @@ function getServerConsentSnapshot(): Consent {
 }
 
 export function CookieConsent() {
-  const consent = useSyncExternalStore(
+  const storedConsent = useSyncExternalStore(
     subscribeToConsent,
     getConsentSnapshot,
     getServerConsentSnapshot,
   );
+  const [sessionConsent, setSessionConsent] = useState<Consent>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const consent = sessionConsent ?? storedConsent;
 
   useEffect(() => {
     const openSettings = () => setIsSettingsOpen(true);
@@ -79,9 +94,11 @@ export function CookieConsent() {
 
   const saveConsent = (choice: Exclude<Consent, null>) => {
     updateAnalyticsPermission(choice);
-    window.localStorage.setItem(consentStorageKey, choice);
+    const isStored = storeConsent(choice);
 
-    if (consent === "accepted" && choice === "rejected") {
+    setSessionConsent(isStored ? null : choice);
+
+    if (isStored && consent === "accepted" && choice === "rejected") {
       window.location.reload();
       return;
     }
