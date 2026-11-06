@@ -139,15 +139,15 @@ export const spots: Spot[] = [
     category: "Culture",
     summary: "The village office in central Umaji.",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Umaji+Village+Office",
-    imageUrl: "/images/spots/umaji-village-office-sign.jpg",
-    imageAlt: "馬路村役場の案内表示",
+    imageUrl: "/images/spots/umaji-village-office-main.jpg",
+    imageAlt: "Exterior of Umaji Village Office in Umaji Village",
     images: [
-      "/images/spots/umaji-village-office-sign.jpg",
-      "/images/spots/umaji-village-office-exterior.jpg",
-      "/images/spots/umaji-village-office-entrance.jpg",
+      "/images/spots/umaji-village-office-main.jpg",
+      "/images/spots/umaji-village-office-monument.jpg",
+      "/images/spots/umaji-village-office-entrance-2026.jpg",
     ],
     notes:
-      "The photos show the building exterior with construction scaffolding at the time they were taken.",
+      "The gallery shows the village office exterior, stone monument, and main entrance.",
   },
   {
     id: "umaji-forest-railway",
