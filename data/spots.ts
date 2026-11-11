@@ -185,7 +185,7 @@ export const spots: Spot[] = [
     name: "Makaichotteya Visitor Center / まかいちょって家",
     category: "Shopping",
     summary: "A village stop with visitor information visible at the entrance.",
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Makaichotteya+Umaji",
+    googleMapsUrl: "https://www.google.com/maps?cid=1059192331703797137",
     imageUrl: "/images/spots/makaichotteya-exterior.jpg",
     imageAlt: "まかいちょって家の外観",
     images: [
