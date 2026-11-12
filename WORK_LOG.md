@@ -1,5 +1,29 @@
 # Umaji Village Guide 作業引き継ぎ
 
+## 2026年11月12日
+
+### Google Search Consoleの登録と所有権確認
+
+- `https://umaji-village-guide.vercel.app/` をGoogle Search Consoleに登録した
+- HTMLファイル方式で所有権確認に成功した
+- 確認用ファイルとして `public/google0119fe92bfc0000e.html` を本番公開した
+- 本番コミット: `030aa06`
+
+### XMLサイトマップの実装と本番公開
+
+- `app/sitemap.ts` を追加し、Googleが読み取れるXMLサイトマップを実装した
+- 固定ページ5件とスポット詳細12件の合計17 URLを掲載した
+- スポット詳細URLは `data/spots.ts` から自動生成し、今後の追加・削除に対応できる構成にした
+- 本番URL: https://umaji-village-guide.vercel.app/sitemap.xml
+- 本番コミット: `e93f178`
+- Vercel Productionが `READY` となり、本番URLがHTTP 200を返すこととXMLが正常であることを確認した
+
+### Google Search Consoleへのサイトマップ送信
+
+- 2026年11月12日にサイトマップを送信し、成功したことを確認した
+- Google Search Console上で17ページが検出されたことを確認した
+- インデックス登録状況と検索パフォーマンスは後日確認する
+
 ## 2026年11月11日
 
 ### まかいちょって家のGoogleマップリンク修正
