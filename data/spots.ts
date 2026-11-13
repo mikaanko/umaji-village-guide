@@ -222,7 +222,7 @@ export const spots: Spot[] = [
     name: "Great Cedar of Mount Asahide / 朝日出山の大杉",
     category: "Nature",
     summary: "A monumental cedar whose height and powerful trunk stand out in the forest setting.",
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Asahideyama+Osugi+Umaji",
+    googleMapsUrl: "https://www.google.com/maps/place/%E6%9C%9D%E6%97%A5%E5%87%BA%E5%B1%B1%E3%81%AE%E5%A4%A7%E6%9D%89/@33.5269934,134.0696539,17z/data=!3m1!4b1!4m6!3m5!1s0x35520d11ab7326fb:0xdfb367549cde2044!8m2!3d33.5269934!4d134.0696539!16s%2Fg%2F11dxl6_dm3",
     imageUrl: "/images/spots/asahideyama-osugi-main.jpg",
     imageAlt: "朝日出山の大杉を見上げた縦写真",
     images: [

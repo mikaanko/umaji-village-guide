@@ -1,5 +1,13 @@
 # Umaji Village Guide 作業引き継ぎ
 
+## 2026年11月13日
+
+### 朝日出山の大杉のGoogleマップリンク修正
+
+- 共通スポットデータの「朝日出山の大杉」のGoogleマップURLを、施設名と座標が指定されたGoogleマップの場所URLへ変更した
+- 対象スポットのGoogleマップURL以外のスポット情報、写真、説明文、レイアウトは変更していない
+- `npm run lint`、`npm run typecheck`、`git diff --check` が成功したことを確認した
+
 ## 2026年11月12日
 
 ### Google Search Consoleの登録と所有権確認
