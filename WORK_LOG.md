@@ -1,5 +1,18 @@
 # Umaji Village Guide 作業引き継ぎ
 
+## 2026年11月20日
+
+### トップページへのYouTube動画・観光アンケートリンク追加
+
+- トップページにYouTube動画と観光アンケートへの外部リンクカードを追加した
+- YouTubeカードに動画タイトル「I Explored This Tiny Yuzu Village in Japan, One Local Recommendation at a Time」と制作者名「maigomika」を表示した
+- 観光アンケートカードに、回答特典としてうまじのパン屋で無料の「Gokkun」ゆずドリンクを受け取れる案内を表示した
+- 2つのリンクは新しいタブで開くようにし、PCでは2列、スマートフォンでは縦並びで表示する構成にした
+- YouTubeの英語版URLはMikaさんに確認中。確認できるまでは今回設定したURLを維持する
+- PC・スマートフォンで表示とリンク先を確認した
+- `npm run lint`、`npm run typecheck`、`npm run build`、`git diff --check` が成功したことを確認した
+- pushと本番公開は実施していない
+
 ## 2026年11月13日
 
 ### 朝日出山の大杉のGoogleマップリンク修正

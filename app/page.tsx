@@ -45,6 +45,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section external-links-section">
+        <div className="section-heading">
+          <p className="eyebrow">Discover more</p>
+          <h2>More ways to experience Umaji</h2>
+        </div>
+        <div className="external-link-grid">
+          <a
+            className="external-link-card"
+            href="https://www.youtube.com/watch?v=vKWLKzXsWWg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="external-link-label">Video</span>
+            <strong>Watch Umaji Village on YouTube</strong>
+            <span className="video-details">
+              <span className="video-title">
+                I Explored This Tiny Yuzu Village in Japan, One Local
+                Recommendation at a Time
+              </span>
+              <span className="video-creator">Creator: maigomika</span>
+            </span>
+            <span className="external-link-action" aria-hidden="true">
+              Watch video <span>↗</span>
+            </span>
+          </a>
+
+          <a
+            className="external-link-card survey-link-card"
+            href="https://tally.so/r/gDxON4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="external-link-label">Visitor survey</span>
+            <strong>Share Your Umaji Experience</strong>
+            <span className="survey-benefit">
+              Complete this quick survey and get a free “Gokkun” yuzu drink
+              at Umaji Bakery!
+            </span>
+            <span className="external-link-action" aria-hidden="true">
+              Take the survey <span>↗</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
       <section className="section">
         <div className="section-heading">
           <p className="eyebrow">Categories</p>
