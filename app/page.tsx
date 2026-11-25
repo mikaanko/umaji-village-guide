@@ -71,22 +71,15 @@ export default function HomePage() {
             </span>
           </a>
 
-          <a
-            className="external-link-card survey-link-card"
-            href="https://tally.so/r/gDxON4"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className="external-link-card survey-link-card">
             <span className="external-link-label">Visitor survey</span>
-            <strong>Share Your Umaji Experience</strong>
+            <strong>Take a Survey &amp; Enjoy a Free Yuzu Drink!</strong>
             <span className="survey-benefit">
-              Complete this quick survey and get a free “Gokkun” yuzu drink
-              at Umaji Bakery!
+              Pick up a free village map at Umaji Bakery, complete the survey
+              using the QR code on the map, and enjoy a complimentary “Gokkun”
+              yuzu drink!
             </span>
-            <span className="external-link-action" aria-hidden="true">
-              Take the survey <span>↗</span>
-            </span>
-          </a>
+          </div>
         </div>
       </section>
 
