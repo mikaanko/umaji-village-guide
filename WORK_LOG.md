@@ -14,6 +14,10 @@
 - 現行の地図画像、11か所のリンク先、地図拡大リンク、スポット一覧、レスポンシブ表示、`next/image`による表示最適化を維持した
 - 新規ライブラリ、元PNGの先読み、アンケート関連の変更は行っていない
 - ローカルで`npm run lint`、`npm run typecheck`、`npm run build`、`git diff --check`が成功し、PC・スマートフォン幅のブラウザ表示とリンク動作を確認した
+- Vercel Preview deployment `dpl_2GnHor6tHsupnpUkMVRNPxhBQXpo`が`READY`となり、コミット`09e583d`のMAPページがHTTP 200を返すことを確認した
+- iPhone Safariの実機でMAPページの表示、保存ボタン、共有画面から写真アプリへの元PNG保存、保存後のオフライン閲覧・拡大、デザインと操作性を確認し、正式採用とした
+- Android実機でのWeb Share API、ダウンロード、オフライン閲覧は未検証
+- GA4本番プロパティでの`map_save_click`、`map_share_complete`、`map_save_fallback`、`map_save_error`の受信は未検証
 
 ## 2026年11月25日
 
