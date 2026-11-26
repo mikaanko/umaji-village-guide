@@ -19,6 +19,15 @@
 - Android実機でのWeb Share API、ダウンロード、オフライン閲覧は未検証
 - GA4本番プロパティでの`map_save_click`、`map_share_complete`、`map_save_fallback`、`map_save_error`の受信は未検証
 
+### 地図保存機能とリンク位置修正の本番公開完了
+
+- `feature/map-save`を`main`へfast-forwardでマージし、コミット`a8d1adf`をGitHubへpushした
+- Vercel Production deployment `dpl_4wXCAL5PNTbBtPnPGMRTk3LVRRJh`が`READY`となり、本番ドメインが新しいDeploymentを参照していることを確認した
+- 本番MAPページ、保存ボタン、PNGダウンロード、画像の直接表示、五味隧道の修正位置を確認した
+- 地図上の全11か所のリンクが正しい詳細ページを参照し、各ページがHTTP 200を返すことを確認した
+- 公開後1時間のVercelランタイムエラーは0件で、対象Deploymentのerror・fatal・warningログも0件だった
+- アンケート関連、元PNG、その他の既存機能・設定は変更していない
+
 ## 2026年11月25日
 
 ### 観光アンケートを現地来訪者向けの案内へ変更
