@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { MapSaveControls } from "@/components/MapSaveControls";
 import { spots } from "@/data/spots";
 
 export const metadata: Metadata = {
@@ -69,7 +70,7 @@ const mapSpots: MapSpot[] = [
   {
     id: "gomi-tunnel",
     label: "五味隧道 / Gomi Tunnel",
-    position: { left: "32.1%", top: "84.2%", width: "10.5%", height: "6%" },
+    position: { left: "32.1%", top: "81.4%", width: "10.5%", height: "6%" },
   },
   {
     id: "asahideyama-osugi",
@@ -133,14 +134,7 @@ export default function IllustratedMapPage() {
 
         </div>
 
-        <a
-          className="map-enlarge-link"
-          href="/images/map/umaji-village-guide-map.png"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open full-size map / 地図を拡大
-        </a>
+        <MapSaveControls />
 
         <div className="map-note">
           <p>

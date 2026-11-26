@@ -2,8 +2,8 @@
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { useEffect, useState, useSyncExternalStore } from "react";
+import { analyticsConsentStorageKey } from "@/lib/analytics-consent";
 
-const consentStorageKey = "umaji-village-guide-analytics-consent";
 const consentChangedEvent = "umaji:analytics-consent-changed";
 export const openCookieSettingsEvent = "umaji:open-cookie-settings";
 
@@ -46,7 +46,7 @@ function subscribeToConsent(onStoreChange: () => void) {
 
 function getConsentSnapshot(): Consent {
   try {
-    const storedConsent = window.localStorage.getItem(consentStorageKey);
+    const storedConsent = window.localStorage.getItem(analyticsConsentStorageKey);
 
     return storedConsent === "accepted" || storedConsent === "rejected"
       ? storedConsent
@@ -58,8 +58,8 @@ function getConsentSnapshot(): Consent {
 
 function storeConsent(choice: Exclude<Consent, null>) {
   try {
-    window.localStorage.setItem(consentStorageKey, choice);
-    return window.localStorage.getItem(consentStorageKey) === choice;
+    window.localStorage.setItem(analyticsConsentStorageKey, choice);
+    return window.localStorage.getItem(analyticsConsentStorageKey) === choice;
   } catch {
     return false;
   }
